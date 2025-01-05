@@ -117,7 +117,7 @@
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/raima-rajan-0a17382a7/"><i class="fa-brands fa-linkedin" style="color: #ff004f;"></i></a>
                     </div>
-                    <a href="images/RAIMA'S RESUME (3).pdf" download class="btn btn2">Download CV</a>
+                    <a href="images/raima resume_1.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -163,23 +163,29 @@
         });
     </script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyIaoXt76FT_5eg1RjBOIALEiJcKfPJ9N0XrfYOEClyBokf100os7Ora8VQuvpQPM6D-A/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxod9H97xNxt-phx45kDm0bEGcfTChg-joB7-6D2kxN2XdpsLS5PJcIz4TQmlNAaslTow/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg=document.getElementById("msg")
       
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML= "your message has been sent!"
-                setTimeout(function(){
-                    msg.innerHTML=""
-                },5000)
-                form.reset()
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Your message has been sent!";
+            msg.style.opacity = 1;
 
-            })
-            .catch(error => console.error('Error!', error.message))
+            setTimeout(function() {
+                msg.style.opacity = 0; // Fade out
+                setTimeout(function() {
+                    msg.innerHTML = ""; // Remove text after fade-out
+                }, 500); // Matches the transition time in CSS
+            }, 3000); // Wait for 3 seconds before fading out
+
+            form.reset();
         })
+        .catch(error => console.error('Error!', error.message));
+});
+
       </script> 
       <script>
         document.querySelector('nav .fas').addEventListener('click', function() {
@@ -188,3 +194,4 @@
     </script>
 </body>
 </html>
+
