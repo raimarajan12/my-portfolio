@@ -20,6 +20,7 @@ body{
     background-position: right ;
     background-repeat: no-repeat;
     display: flex;
+
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -382,6 +383,14 @@ border-radius: 6px;
 }
 nav .fas{
 display: none;
+}
+#msg {
+    color: #e06f80;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Smooth fade-out effect */
 }
 
 /*css for smaller screen*/
