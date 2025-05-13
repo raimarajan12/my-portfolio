@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/271557d255.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header id="header" >
+        <div class="header-content">
+            <div class="name">Raima Rajan</div>
+            <nav>
+                
+                <ul id="sidemenu">
+                    
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+        <div class="header-text">
+            <p>Student</p>
+            <h1>Hello, I am <span class="highlight">Raima Rajan</span></h1>
+        </div>
+        
+    </header>
+    
+    
+    <!--------about-------->
+    
+    <div id="about" >
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/i4.jpg" alt="Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> ABOUT ME</h1>
+                    <p class="enlarged-paragraph">I am a dedicated and diligent student, deeply engaged in the dynamic world of technology.
+                         My academic success is complemented by strong leadership skills and an unwavering passion  
+                         for learning. I actively seek opportunities to innovate and make a positive impact. Confident
+                         in my abilities, I am eager to contribute and grow in a professional environment, offering a 
+                         unique blend of skills and a readiness to embrace new challenges.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span class="highlighted-text1">JAVA</span><br>(Programming Language)</li>
+                            <li><span class="highlighted-text1">C</span><br>(Programming Language)</li>
+                            <li><span class="highlighted-text1">Data Structures and Algorithms</span></li>
+                            <li><span class="highlighted-text1">Web Development(Frontend)</span><br>(Primary)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span class="highlighted-text1">2022</span><br>Amity International School,Noida <br>
+                                <span class="highlighted-text">Class 12th Percentage: 97%</span>
+                                <span class="highlighted-text">Class 10th Percentage: 96.2%</span></li>
+                            <li><span class="highlighted-text1">2022-2026</span><br>Netaji Subhas University of Technology,New Delhi <br>
+                                <span class="highlighted-text">Electrical Engineering</span>
+                                <span class="highlighted-text">CGPA:8.0</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------portfolio ---------->
+    <section id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">MY WORK</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpg" alt="Hospital Management System">
+                    <div class="layer">
+                        <h3>Hospital Management System</h3>
+                        <p>As a college project, a Hospital Management System utilizing a DBMS has been developed to address healthcare data management challenges. This system centralizes data, ensuring accuracy and real-time accessibility. It streamlines hospital operations, improves decision-making, and enhances patient care, offering a glimpse into how technology can revolutionize healthcare management within the scope of a student project.</p>
+                        <a href="images/dbms final1.pdf" target="_blank">
+                            <i class="fa-solid fa-link" style="color: #d33c3c;"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg" alt="Personal Portfolio">
+                    <div class="layer">
+                        <h3>Personal Portfolio</h3>
+                        <p>Embarking on the creation of my personal portfolio, I embrace the opportunity to dive headfirst into the realm of web development, despite my initial lack of expertise. As a student, each step forward is a triumph, as I discover the intricacies of HTML, CSS, and JavaScript through practical application. With every line of code, I am empowered by the knowledge gained, transforming this project into a journey of growth and self-discovery.</p>
+                        <a href="#"><i class="fa-solid fa-link" style="color: #d33c3c;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="btn">See more</a>
+        </div>
+    </section>
+    
+    <!----------contact------------>
+
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">CONTACT ME</h1>
+                    <p><i class="fa-regular fa-envelope" style="color: #ff004f;"></i>rajanraima12@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" style="color: #ff004f;"></i>9205424288</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/raima-rajan-0a17382a7/"><i class="fa-brands fa-linkedin" style="color: #ff004f;"></i></a>
+                    </div>
+                    <a href="images/raima resume (2).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">SUBMIT</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+     <script>
+        document.querySelector('nav .fas').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyIaoXt76FT_5eg1RjBOIALEiJcKfPJ9N0XrfYOEClyBokf100os7Ora8VQuvpQPM6D-A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= "your message has been sent!"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script> 
+      <script>
+        document.querySelector('nav .fas').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
